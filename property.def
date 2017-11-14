@@ -1,0 +1,4 @@
+//#line "property.c" 72
+extern void DisplayProperties(void);
+//#line "property.c" 123
+extern int __stdcall Page1Proc(void *hwndDlg,unsigned int Msg,unsigned int wParam,long lParam);

@@ -1,0 +1,734 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       98/01/23 16:54:32
+Executable Image: vwm.exe
+creating a Windows NT windowed executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        0001b610
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000007
+_TEXT                  CODE                          0001:00000010   000091c8
+TRANSFER CODE          CODE                          0001:000091d8   00000354
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   000007bc
+CONST2                 DATA           DGROUP         0002:000007c0   00000198
+_DATA                  DATA           DGROUP         0002:00000958   0000051c
+XIB                    DATA           DGROUP         0002:00000e74   00000000
+XI                     DATA           DGROUP         0002:00000e74   0000001e
+XIE                    DATA           DGROUP         0002:00000e92   00000000
+YIB                    DATA           DGROUP         0002:00000e92   00000000
+YI                     DATA           DGROUP         0002:00000e92   00000012
+YIE                    DATA           DGROUP         0002:00000ea4   00000000
+TIB                    DATA           DGROUP         0002:00000ea4   00000000
+TI                     DATA           DGROUP         0002:00000ea4   00000000
+TIE                    DATA           DGROUP         0002:00000ea4   00000000
+DATA                   DATA           DGROUP         0002:00000ea4   00000000
+DATA32                 DATA           DGROUP         0002:00000ea4   0000011c
+CONST32                CONST          DGROUP         0002:00001010   00000000
+_BSS                   BSS            DGROUP         0002:00001010   0000a600
+BSS32                  BSS            DGROUP         0002:0000b610   00000000
+STACK                  STACK          DGROUP         0002:0000b610   00010000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: enum.obj(d:\vwmrel1.2\enum.c)
+0001:00000010  _WinEnumProc@8
+0001:000004d8  PurgeInfoTable_
+0001:0000057c  GetWinInfo_
+0001:0000077c  RecalculateClientPos_
+0001:000009bc  RecalculateNewVW_
+0001:00000ba8  SetDeltaWindowPos_
+Module: init.obj(d:\vwmrel1.2\init.c)
+0001:00000d00  VWM_Create_
+0001:00001094  VWM_Close_
+Module: lock.obj(d:\vwmrel1.2\lock.c)
+0001:000010d0  LockConsole_
+0001:000011c0+ _DialogLockProc@16
+Module: property.obj(d:\vwmrel1.2\property.c)
+0001:000013a0  DisplayProperties_
+0001:000014a0+ _Page1Proc@16
+0001:00001784+ _Page2Proc@16
+0001:00001c74+ _Page3Proc@16
+Module: registry.obj(d:\vwmrel1.2\registry.c)
+0001:00001da0  LoadRegistryInfo_
+0001:0000227c  SaveRegistryInfo_
+Module: services.obj(d:\vwmrel1.2\services.c)
+0001:000025a0+ DrawWindow_
+0001:000026e4  UseDC_
+0001:00002828  UseBitmap_
+0001:00002ac0  VWMPaint_
+0001:00002d9c  FindWindowPt_
+0001:00002e74  RestoreWindow_
+0001:00002f04  GetWindowCaption_
+0001:00002f50  RestoreAll_
+0001:00003120  TrayMessage_
+0001:000031b0  SetVWMStyle_
+0001:00003218+ FormatAppsMenu_
+Module: vwm.obj(d:\vwmrel1.2\vwm.c)
+0002:00001228  _xToClient
+0002:00001240  _VCur
+0002:00001248  _VOrigin
+0002:00001250  _Vrc
+0002:00001260  _VClientSize
+0002:00001268  _Desktop
+0002:00001270  _xToWin
+0002:00001288  _VSize
+0002:00001290  _sIgnoreClasses
+0002:000012b8  _VStep
+0002:000012c0  _nHash
+0002:00001450  _Back
+0002:00001ec8  _Win
+0002:0000206c  _nTimer
+0002:0000208c  _nBitmapTile
+0002:00002090  _fLocked
+0002:00002094  _fDoubleBuffer
+0002:00002098  _RefreshTimeMax
+0002:0000209c  _fBitmap
+0002:000020a0  _fNeedPaint
+0002:000020a4  _hVWM
+0002:000020a8  _nAutohideDelay
+0002:000020ac  _fBorder
+0002:000020b0  _nWinTop
+0002:000020b4  _fKeyboard
+0002:000020b8  _fMouse
+0002:000009d0+ _sVWMClass
+0002:000009d4  _sVWMCaption
+0002:000009d8+ _sVWMMenu
+0001:00003310* SemaphoreShowWindow_
+0001:00003340+ EchoError_
+0001:00003388  _WinMain@16
+0001:00003614+ _AboutDlgProc@16
+0001:0000366c+ _WindowProc@16
+0002:000020bc  _fAutohide
+0002:000020c0  _fIcons
+0002:000020c4  _VWMInst
+0002:000020c8  _fLightBack
+0002:000020cc  _hDesktop
+0002:000020d0  _MouseParkTimeMax
+0002:000020d4  _Metrics
+0002:000020e8  _Info
+Module: C:\WATCOM\lib386\nt\clib3r.lib(set386)
+0001:00004250  memset_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(memcpy)
+0001:00004268  memcpy_
+Module: C:\WATCOM\lib386\math387r.lib(fchop)
+0001:0000428e  __CHP
+Module: C:\WATCOM\lib386\nt\clib3r.lib(stricmp)
+0001:000042ab* stricmp_
+0001:000042ab* _stricmp_
+0001:000042ab  strcmpi_
+Module: C:\WATCOM\lib386\nt\emu387.lib(386inite)
+0001:000042f3* __fini_387_emulator
+0001:000042f2  __init_387_emulator
+Module: C:\WATCOM\lib386\nt\clib3r.lib(_8087386)
+0002:000009e0  __8087
+0002:000009e1  __real87
+Module: C:\WATCOM\lib386\nt\clib3r.lib(fltused)
+0000:00000000  _fltused_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(sprintf)
+0001:00004307  sprintf_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(cstrtww2)
+0001:00004338  _wstart2_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(__stos)
+0001:000043c0  __STOSB
+0001:000043f7* __STOSD
+Module: C:\WATCOM\lib386\nt\clib3r.lib(chk8087)
+0001:0000446c+ __init_8087_
+0001:0000449d  _fpreset_
+0001:000044a7  __chk8087_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(crwd386)
+0002:000009f8* __psp
+0002:00000a23  __osmajor
+0002:00000a24  __osminor
+0002:00000a25  __osbuild
+0002:00000a1a* __Extender
+0002:00000a1b* __ExtenderSubtype
+0002:00000a1c* __X32VM
+0002:000009fc* __x386_stacklow
+0002:000009ec  __LpCmdLine
+0002:000009f0  __LpPgmName
+0002:000009f4  __LpDllName
+0002:000009e4* __dynend
+0002:000009e8  __curbrk
+0002:000009fc* __STACKLOW
+0002:00000a00* __STACKTOP
+0002:00000a04  __ASTACKSIZ
+0002:00000a08  __ASTACKPTR
+0002:00000a0c* __cbyte
+0002:00000a10* __cbyte2
+0002:00000a14* __child
+0002:00000a1d  __Envptr
+0002:00000a21* __Envseg
+0002:00000a18  __no87
+0002:00000a27* __FPE_handler
+0002:00000a27* ___FPE_handler
+Module: C:\WATCOM\lib386\nt\clib3r.lib(setefg)
+0001:000044f2  __setEFGfmt_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(prtf)
+0001:0000450d  __prtf_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(wmainwnt)
+0001:000050eb  __WinMain
+0002:0000b484  __WinMainProc
+Module: C:\WATCOM\lib386\nt\clib3r.lib(segdefns)
+0001:00000003  ___begtext
+0002:00000000* __nullarea
+Module: C:\WATCOM\lib386\nt\clib3r.lib(save8087)
+0002:00000a2c  ___Save8087
+0002:00000a30  ___Rest8087
+Module: C:\WATCOM\lib386\nt\clib3r.lib(8087cw)
+0002:00000a34  __8087cw
+Module: C:\WATCOM\lib386\nt\clib3r.lib(ini87386)
+0001:000051de  __init_80x87
+Module: C:\WATCOM\lib386\nt\clib3r.lib(efgfmt)
+0001:00005205  _EFG_Format_
+Module: C:\WATCOM\lib386\math387r.lib(cnvs2d)
+0001:0000534e  __cnvs2d_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(noefgfmt)
+0002:00000a38  ___EFG_printf
+0002:00000a3c  ___EFG_scanf
+Module: C:\WATCOM\lib386\nt\clib3r.lib(itoa)
+0001:00005393+ utoa_
+0001:000053dd  itoa_
+0001:000053dd* _itoa_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(ltoa)
+0001:0000541d  ultoa_
+0001:00005467  ltoa_
+0001:00005467* _ltoa_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(toupper)
+0001:00005482  toupper_
+0001:00005482* _toupper_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(inirt386)
+0001:00005490  __InitRtns
+0001:000054db  __FiniRtns
+Module: C:\WATCOM\lib386\nt\clib3r.lib(regdata)
+0001:0000552a* __RegisterThreadDataSize_
+0002:00000a40  ___ThreadDataSize
+Module: C:\WATCOM\lib386\nt\clib3r.lib(mainwnt)
+0002:00000a44  ___TlsIndex
+0002:00000a48  ___GetThreadPtr
+0002:00000a4c  __AccessFileH
+0002:00000a50  __ReleaseFileH
+0002:00000a54  __InitAccessH
+0002:00000a58  __FiniAccessH
+0002:00000a5c  __AccessIOB
+0002:00000a60  __ReleaseIOB
+0002:00000a64  __AccessNHeap
+0002:00000a68  __AccessFHeap
+0002:00000a6c  __ReleaseNHeap
+0001:0000553f* __threadid_
+0001:0000555b+ __NTInit_
+0001:00005682  __NTMainInit_
+0001:000056c8  __exit_
+0002:00000a70  __ReleaseFHeap
+0002:00000a74  __AccessTDList
+0002:00000a78  __ReleaseTDList
+0002:00000a7c  __AccessFList
+0002:00000a80  __ReleaseFList
+0002:00000a84  __ThreadExitRtn
+0002:00000a88  ___sig_init_rtn
+0002:00000a8c  ___sig_fini_rtn
+0002:0000b488  ___Is_DLL
+0002:0000b48c  ___FirstThreadData
+Module: C:\WATCOM\lib386\nt\clib3r.lib(stack386)
+0001:000056e7  stackavail_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(cinit)
+0001:00005716  __CommonInit_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(strdup)
+0001:00005721  strdup_
+0001:00005721* _strdup_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(istable)
+0002:000007c0  __IsTable
+Module: C:\WATCOM\lib386\nt\clib3r.lib(exit)
+0001:00005766+ __null_int23_exit_
+0001:00005767  exit_
+0001:0000577f+ _exit_
+0002:00000a90+ ___atexit
+0002:00000a94+ ___int23_exit
+0002:00000a98+ ___FPE_handler_exit
+Module: C:\WATCOM\lib386\nt\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: C:\WATCOM\lib386\math387r.lib(ftos)
+0001:000057a4* _SetMaxPrec_
+0001:00005921  _FtoS_
+Module: C:\WATCOM\lib386\math387r.lib(strtod)
+0001:00005b5b  strtod_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(xmsgwnt)
+0001:00005d4e+ __exit_with_msg_
+0001:00005d85  __fatal_runtime_error_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(signlwnt)
+0002:00000aa0+ _SignalTable
+0001:00005e9d+ __sigabort_
+0001:00005ea2+ raise_
+0001:00005edb+ __sigfpe_handler_
+0001:00005f22* signal_
+0001:00006007  __SigInit_
+0001:00006034  __SigFini_
+0001:00006052+ ___ExceptionFilter
+0001:00006405  __NewExceptionHandler_
+0001:00006443  __DoneExceptionHandler_
+0002:0000b490+ ___ExceptionHandled
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nthdl)
+0001:00006492* __NTAtMaxFiles_
+0001:000064d7  __NTAddFileHandle_
+0001:00006550* __NTAddSpecificFileHandle_
+0001:000065ec  __NTRemoveFileHandle_
+0001:00006618  __NTInitFileHandles_
+0001:0000664f* __NTGetFakeHandle_
+0002:0000b498  ___FileHandleIDs
+Module: C:\WATCOM\lib386\nt\clib3r.lib(mthread)
+0001:00006662+ __CloseSemaphore_
+0001:0000668e+ __AccessIOB_
+0001:00006698+ __ReleaseIOB_
+0001:000066a2+ __AccessFileH_
+0001:000066af+ __ReleaseFileH_
+0001:000066bf+ __InitAccessH_
+0001:000066c4+ __FiniAccessH_
+0001:000066e0+ __AccessNHeap_
+0001:000066e7+ __ReleaseNHeap_
+0001:000066f1+ __AccessFHeap_
+0001:000066f8+ __ReleaseFHeap_
+0001:00006702+ __AccessTDList_
+0001:00006709+ __ReleaseTDList_
+0001:00006710+ __AccessFList_
+0001:00006715+ __AccessSemaphore_
+0001:00006772+ __ReleaseFList_
+0001:00006777+ __ReleaseSemaphore_
+0001:0000679c+ __MultipleThread_
+0001:000067bc  __InitThreadData_
+0001:000067fb  __NTThreadInit_
+0001:00006847  __NTAddThread_
+0001:00006894  __NTRemoveThread_
+0001:000068eb+ __NTThreadFini_
+0001:0000690b  __InitMultipleThread_
+0002:00000b10+ ___AccessSema4
+0002:00000b14+ ___ReleaseSema4
+0002:00000b18+ ___CloseSema4
+0002:00000e98* ___AccessSema4Fini
+Module: C:\WATCOM\lib386\nt\clib3r.lib(amblksiz)
+0002:00000b1c  __amblksiz
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nmalloc)
+0001:00006a8f  _nmalloc_
+0001:00006a8f  malloc_
+0002:00000b20  ___nheapbeg
+0002:00000b24  ___MiniHeapRover
+0002:00000b28  ___LargestSizeB4MiniHeapRover
+Module: C:\WATCOM\lib386\nt\clib3r.lib(winrtns)
+0002:00000b2c  __WindowsIsWindowedHandle
+0002:00000b30  __WindowsRemoveWindowedHandle
+0002:00000b34* __WindowsNewWindow
+0002:00000b38  __WindowsCloseWindow
+0002:00000b3c* __WindowsSetAbout
+0002:00000b40* __WindowsSetAppTitle
+0002:00000b44* __WindowsSetConTitle
+0002:00000b48* __WindowsDestroyOnClose
+0002:00000b4c* __WindowsYieldControl
+0002:00000b50* __WindowsShutDown
+0002:00000b54* __WindowsStdin
+0002:00000b58  __WindowsStdout
+0002:00000b5c* __WindowsKbhit
+0002:00000b60* __WindowsGetch
+0002:00000b64* __WindowsGetche
+0002:00000b68* __WindowsPutch
+0002:00000b6c  __WindowExitRtn
+Module: C:\WATCOM\lib386\math387r.lib(nan_inf)
+0001:00006b7e  __Nan_Inf_
+Module: C:\WATCOM\lib386\math387r.lib(log387)
+0001:00006c5b* log_
+0001:00006c73* log2_
+0001:00006c67* log10_
+0001:00006c10* IF@LOG
+0001:00006c10* IF@DLOG
+0001:00006c53* IF@LOG2
+0001:00006c53* IF@DLOG2
+0001:00006c57* IF@LOG10
+0001:00006c57  IF@DLOG10
+Module: C:\WATCOM\lib386\math387r.lib(floor)
+0001:00006c7f  floor_
+Module: C:\WATCOM\lib386\math387r.lib(scale)
+0001:00006cbb+ _Scale_
+0001:00006cfc  _Scale10V_
+Module: C:\WATCOM\lib386\math387r.lib(cvt)
+0001:00006e19  __cvt_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(amodf386)
+0001:00006ff6* __ModF
+0001:00007086  __ZBuf2F
+Module: C:\WATCOM\lib386\nt\clib3r.lib(seterrno)
+0001:00007122  __set_EDOM_
+0001:00007127  __set_errno_
+0001:00007135  __set_ERANGE_
+0001:0000713c* __set_EINVAL_
+0001:0000714c  __set_doserrno_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(hugeval)
+0002:000008e4  __HugeValue
+Module: C:\WATCOM\lib386\nt\clib3r.lib(enterdb)
+0001:0000715a  __EnterWVIDEO_
+0002:00000b70+ ___WD_Present
+Module: C:\WATCOM\lib386\nt\clib3r.lib(abort)
+0001:00007180* abort_
+0001:00007186  __terminate_
+0002:00000b74  ___abort
+Module: C:\WATCOM\lib386\math387r.lib(cntrl87)
+0001:00007198  _control87_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(conutwnt)
+0001:000071eb* __NTRealKey_
+0001:00007280* __NTConsoleInput_
+0001:0000728b  __NTConsoleOutput_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(iomode)
+0001:00007296  __IOMode_
+0001:000072eb  __SetIOMode_
+0002:00000b80  ___NFiles
+0002:00000b84+ ___init_mode
+0002:00000bd4+ __iomode
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nrealloc)
+0001:00007300* _nrealloc_
+0001:00007300  realloc_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(trdlist)
+0001:0000737a  __GetThreadData_
+0001:000073b1  __AddThreadData_
+0001:00007412  __RemoveThreadData_
+0001:0000745c  __FreeThreadDataList_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(calloc)
+0001:00007485  calloc_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nfree)
+0001:0000749d  _nfree_
+0001:0000749d  free_
+0002:0000b600  ___MiniHeapFreeRover
+Module: C:\WATCOM\lib386\nt\clib3r.lib(trdalloc)
+0001:0000752b  __FiniThreadProcessing_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(memalloc)
+0001:00007530  __MemAllocator
+0001:000075d8  __MemFree
+Module: C:\WATCOM\lib386\nt\clib3r.lib(grownear)
+0001:000077e7  __ExpandDGROUP_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nmemneed)
+0001:00007842  __nmemneed_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(heapmod)
+0002:0000b604  ___nheap_clean
+0002:0000b605  ___fheap_clean
+Module: C:\WATCOM\lib386\math387r.lib(log87e)
+0001:00007845  __log87_err_
+Module: C:\WATCOM\lib386\math387r.lib(modf387)
+0001:00007882  modf_
+Module: C:\WATCOM\lib386\math387r.lib(i64ts386)
+0001:0000789c  __CmpBigInt
+0001:000078d6  __Rnd2Int
+0001:00007941  __Bin2String
+Module: C:\WATCOM\lib386\math387r.lib(fpow10)
+0002:000008ec  __BigPow10Table
+Module: C:\WATCOM\lib386\nt\clib3r.lib(chipvar)
+0002:00000bd8  ___chipbug
+0002:00000bd8  __chipbug
+Module: C:\WATCOM\lib386\nt\clib3r.lib(chipd32)
+0001:00007b7b* __fdiv_fpr
+0001:0000803d* __fdiv_chk
+0001:00008050* __fdiv_m32
+0001:0000809c  __fdiv_m64
+0001:000080e8* __fdiv_m32r
+0001:00008134* __fdiv_m64r
+Module: C:\WATCOM\lib386\math387r.lib(frexp)
+0001:00008180  frexp_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(isattwnt)
+0001:000081ef  isatty_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nmsize)
+0001:00008230  _nmsize_
+0001:00008230* _msize_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nexpand)
+0001:00008239  _nexpand_
+0001:00008239* _expand_
+0001:00008273+ __HeapManager_expand_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(register)
+0001:00008414* _beginthread_
+0001:0000841b  _endthread_
+0001:00008422  __initthread_
+0001:00008429* __RegisterThreadData_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(heapen)
+0001:00008468* _heapenable_
+0002:00000be8  ___heap_enabled
+Module: C:\WATCOM\lib386\nt\clib3r.lib(nheapmin)
+0001:00008489  _nheapshrink_
+0001:00008489* _nheapmin_
+0001:00008489* _heapmin_
+0001:00008489* _heapshrink_
+Module: C:\WATCOM\lib386\math387r.lib(math2err)
+0001:0000854e  __math1err_
+0001:00008558+ __math2err_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(chipbug)
+0001:00008633  verify_pentium_fdiv_bug_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(thredwnt)
+0001:00008734  __CBeginThread_
+0001:00008808  __CEndThread_
+Module: C:\WATCOM\lib386\math387r.lib(_matherr)
+0001:00008832* _set_matherr_
+0001:00008838+ __rterrmsg_
+0001:00008880  _matherr_
+0002:00000c48+ __RWD_matherr
+Module: C:\WATCOM\lib386\math387r.lib(__mtherr)
+0001:000088b0  __matherr
+Module: C:\WATCOM\lib386\nt\clib3r.lib(iobaddr)
+0001:000088b5  __get_std_stream_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(fputs)
+0001:000088d4  fputs_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(fputc)
+0001:00008961  fputc_
+Module: C:\WATCOM\lib386\math387r.lib(matherr)
+0001:00008a24  matherr_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(iob)
+0002:00000c4c  ___iob
+0002:00000e54* ___tmpfnext
+0002:00000e55* __fmode
+0002:0000b608  ___ClosedStreams
+Module: C:\WATCOM\lib386\nt\clib3r.lib(ioalloc)
+0001:00008a27  __ioalloc_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(flush)
+0001:00008a9e  __flush_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(stinit)
+0002:0000b60c  ___OpenStreams
+Module: C:\WATCOM\lib386\nt\clib3r.lib(chktty)
+0001:00008b88  __chktty_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(qwrit)
+0001:00008bb9  __qwrite_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(lseekwnt)
+0001:00008c5f  lseek_
+0001:00008c5f* _lseek_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(initfile)
+0001:00008c99  __InitFiles_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(ioexit)
+0001:00008d10  __full_io_exit_
+0001:00008d1c* fcloseall_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(dosret)
+0001:00008d79* _dosret0_
+0001:00008d80* _dosretax_
+0001:00008d84+ __set_errno_dos_
+0001:00008dd5  __set_errno_nt_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(allocfp)
+0001:00008de4* __allocfp_
+0001:00008e9c+ __freefp_
+0001:00008ed5  __purgefp_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(fclose)
+0001:00008ef3* fclose_
+0001:00008f32  __shutdown_stream_
+0001:00008f53+ __MkTmpFile_
+0001:00008fb8+ __doclose_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(gtpidwnt)
+0001:00009063  getpid_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(ftell)
+0001:0000906d  ftell_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(_clsewnt)
+0001:000090be  __close_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(remove)
+0001:0000912d  remove_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(tellwnt)
+0001:00009132  tell_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(fflush)
+0001:0000916f  fflush_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(unlnkwnt)
+0001:0000917f  unlink_
+Module: C:\WATCOM\lib386\nt\clib3r.lib(flushall)
+0001:00009198  flushall_
+0001:0000919d* __flushall_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+_GetOpenFileNameA@4                 comdlg32.dll
+_ShellHook@12                       vwmdll.dll
+_KbdHook@12                         vwmdll.dll
+SetHookHandle_                      vwmdll.dll
+_CreatePropertySheetPageA@4         COMCTL32.dll
+_PropertySheetA@4                   COMCTL32.dll
+_InitCommonControls@0               COMCTL32.dll
+_GetCommandLineA                    KERNEL32.DLL
+_GetModuleHandleA                   KERNEL32.DLL
+_ExitProcess                        KERNEL32.DLL
+_GetEnvironmentStrings              KERNEL32.DLL
+_GetModuleFileNameA                 KERNEL32.DLL
+_GetVersion                         KERNEL32.DLL
+_WriteFile                          KERNEL32.DLL
+_SetConsoleCtrlHandler              KERNEL32.DLL
+_wsprintfA                          USER32.DLL
+_GetActiveWindow                    USER32.DLL
+_LoadLibraryA                       KERNEL32.DLL
+_GetProcAddress                     KERNEL32.DLL
+_SetStdHandle                       KERNEL32.DLL
+_GetStdHandle                       KERNEL32.DLL
+_CloseHandle                        KERNEL32.DLL
+_GetCurrentThreadId                 KERNEL32.DLL
+_CreateMutexA                       KERNEL32.DLL
+_WaitForSingleObject                KERNEL32.DLL
+_ReleaseMutex                       KERNEL32.DLL
+_TlsGetValue                        KERNEL32.DLL
+_TlsAlloc                           KERNEL32.DLL
+_TlsSetValue                        KERNEL32.DLL
+_TlsFree                            KERNEL32.DLL
+_CreateFileA                        KERNEL32.DLL
+_VirtualAlloc                       KERNEL32.DLL
+_GetFileType                        KERNEL32.DLL
+_VirtualFree                        KERNEL32.DLL
+_SetEvent                           KERNEL32.DLL
+_GetCurrentThread                   KERNEL32.DLL
+_CreateEventA                       KERNEL32.DLL
+_CreateThread                       KERNEL32.DLL
+_ExitThread                         KERNEL32.DLL
+_SetFilePointer                     KERNEL32.DLL
+_GetLastError                       KERNEL32.DLL
+_GetCurrentProcessId                KERNEL32.DLL
+_DeleteFileA                        KERNEL32.DLL
+_MessageBoxA@16                     USER32.dll
+_IsWindowVisible@4                  USER32.dll
+_GetWindowPlacement@8               USER32.dll
+_GetWindowTextA@12                  USER32.dll
+_GetClassNameA@12                   USER32.dll
+_GetWindowLongA@8                   USER32.dll
+_GetClassLongA@8                    USER32.dll
+_SendMessageA@16                    USER32.dll
+_BeginDeferWindowPos@4              USER32.dll
+_DeferWindowPos@32                  USER32.dll
+_EndDeferWindowPos@4                USER32.dll
+_InvalidateRect@12                  USER32.dll
+_SetWindowPos@28                    USER32.dll
+_GetDesktopWindow@0                 USER32.dll
+_GetClientRect@8                    USER32.dll
+_EnumWindows@8                      USER32.dll
+_SetWindowPlacement@8               USER32.dll
+_SetTimer@16                        USER32.dll
+_LoadIconA@8                        USER32.dll
+_GetModuleHandleA@4                 KERNEL32.dll
+_SetWindowsHookExA@16               USER32.dll
+_UnhookWindowsHookEx@4              USER32.dll
+_CreateFileA@28                     KERNEL32.dll
+_DialogBoxParamA@20                 USER32.dll
+_CloseHandle@4                      KERNEL32.dll
+_SendDlgItemMessageA@20             USER32.dll
+_GetWindowRect@8                    USER32.dll
+_ClipCursor@4                       USER32.dll
+_SetFocus@4                         USER32.dll
+_SetForegroundWindow@4              USER32.dll
+_SetActiveWindow@4                  USER32.dll
+_EndDialog@8                        USER32.dll
+_lstrcmpA@8                         KERNEL32.dll
+_SetDlgItemInt@16                   USER32.dll
+_CheckDlgButton@12                  USER32.dll
+_GetDlgItemInt@16                   USER32.dll
+_IsDlgButtonChecked@8               USER32.dll
+_WinHelpA@16                        USER32.dll
+_CheckRadioButton@16                USER32.dll
+_lstrcpyA@8                         KERNEL32.dll
+_RegCreateKeyExA@36                 ADVAPI32.dll
+_RegQueryValueExA@24                ADVAPI32.dll
+_RegEnumValueA@32                   ADVAPI32.dll
+_RegSetValueExA@24                  ADVAPI32.dll
+_RegDeleteKeyA@8                    ADVAPI32.dll
+_Rectangle@20                       GDI32.dll
+_DrawEdge@16                        USER32.dll
+_DrawIconEx@36                      USER32.dll
+_BitBlt@36                          GDI32.dll
+_GetDC@4                            USER32.dll
+_CreateCompatibleDC@4               GDI32.dll
+_CreateCompatibleBitmap@12          GDI32.dll
+_SelectObject@8                     GDI32.dll
+_ReleaseDC@8                        USER32.dll
+_DeleteDC@4                         GDI32.dll
+_DeleteObject@4                     GDI32.dll
+_StretchBlt@44                      GDI32.dll
+_LoadImageA@24                      USER32.dll
+_GetObjectA@12                      GDI32.dll
+_BeginPaint@8                       USER32.dll
+_GetSysColor@4                      USER32.dll
+_CreateBrushIndirect@4              GDI32.dll
+_GetSysColorBrush@4                 USER32.dll
+_CreatePen@12                       GDI32.dll
+_MoveToEx@16                        GDI32.dll
+_LineTo@12                          GDI32.dll
+_EndPaint@8                         USER32.dll
+_PtInRect@12                        USER32.dll
+_lstrcpynA@12                       KERNEL32.dll
+_Shell_NotifyIconA@8                SHELL32.dll
+_DestroyIcon@4                      USER32.dll
+_SetWindowLongA@12                  USER32.dll
+_GetSubMenu@8                       USER32.dll
+_GetMenuItemCount@4                 USER32.dll
+_DeleteMenu@12                      USER32.dll
+_AppendMenuA@16                     USER32.dll
+_EnableMenuItem@12                  USER32.dll
+_DrawMenuBar@4                      USER32.dll
+_GetLastError@0                     KERNEL32.dll
+_FindWindowA@8                      USER32.dll
+_LoadCursorA@8                      USER32.dll
+_RegisterClassA@4                   USER32.dll
+_LoadMenuA@8                        USER32.dll
+_CreateWindowExA@48                 USER32.dll
+_ShowWindow@8                       USER32.dll
+_UpdateWindow@4                     USER32.dll
+_GetMessageA@16                     USER32.dll
+_TranslateMessage@4                 USER32.dll
+_DispatchMessageA@4                 USER32.dll
+_ShellAboutA@16                     SHELL32.dll
+_PostMessageA@16                    USER32.dll
+_GetCursorPos@4                     USER32.dll
+_WindowFromPoint@8                  USER32.dll
+_ClientToScreen@8                   USER32.dll
+_TrackPopupMenu@28                  USER32.dll
+_GetSystemMetrics@4                 USER32.dll
+_DestroyWindow@4                    USER32.dll
+_PostQuitMessage@4                  USER32.dll
+_DefWindowProcA@16                  USER32.dll
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM\lib386\nt\comctl32.lib
+vwmdll.lib
+C:\WATCOM\lib386\math387r.lib
+C:\WATCOM\lib386\nt\emu387.lib
+C:\WATCOM\lib386\nt\clib3r.lib
+C:\WATCOM\lib386\nt\nt.lib
+C:\WATCOM\lib386\nt\kernel32.lib
+C:\WATCOM\lib386\nt\user32.lib
+C:\WATCOM\lib386\nt\gdi32.lib
+C:\WATCOM\lib386\nt\comdlg32.lib
+C:\WATCOM\lib386\nt\advapi32.lib
+C:\WATCOM\lib386\nt\shell32.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00010000 (65536.)
+Memory size:  00024b3c (150332.)
+Entry point address: 0001:00004338
+Link time: 00:01.43

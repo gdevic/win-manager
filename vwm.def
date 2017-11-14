@@ -1,0 +1,8 @@
+//#line "vwm.c" 125
+extern void EchoError(void);
+//#line "vwm.c" 153
+extern int __stdcall WinMain(void *this_inst,void *prev_inst,char *cmdline,int cmdshow);
+//#line "vwm.c" 282
+extern int __export __stdcall AboutDlgProc(void *hWnd,unsigned int Msg,unsigned int wParam,long lParam);
+//#line "vwm.c" 328
+extern long __export __stdcall WindowProc(void *hWnd,unsigned int Msg,unsigned int wParam,long lParam);

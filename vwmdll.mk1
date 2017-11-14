@@ -1,0 +1,24 @@
+!define BLANK ""
+d:\vwmrel1.2\vwmdll.obj : d:\vwmrel1.2\vwmdll.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 vwmdll.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -bd&
+ -nmVwmDll -5r -bt=nt -mf
+
+d:\vwmrel1.2\vwmdll.dll : d:\vwmrel1.2\vwmdll.obj .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ @%write vwmdll.lk1 NAME vwmdll
+ @%append vwmdll.lk1 FIL vwmdll.obj
+ @%append vwmdll.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b vwmdll.imp 
+ @%append vwmdll.lk1 LIBR vwmdll.imp
+!endif
+ *wlink d all SYS nt_dll seg class FAR_DATA sh op m op maxe=25 op q op symf &
+@vwmdll.lk1
+!ifneq BLANK ""
+ wrc -q -ad  vwmdll.dll
+!endif
+ wlib -n -b vwmdll.lib +vwmdll.dll
+

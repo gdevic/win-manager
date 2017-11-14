@@ -1,0 +1,20 @@
+#include "windows.h"
+#include "globals.h"
+
+Icon ICON VWM.ico
+
+Menu MENU
+        BEGIN
+        POPUP "Selection"
+            BEGIN
+            MENUITEM "P&roperties...",  MENU_PROPS
+            MENUITEM "&About...",       MENU_ABOUT
+            MENUITEM SEPARATOR
+            MENUITEM "E&xit",           MENU_EXIT
+            END
+        END
+
+Page1 DIALOG DISCARDABLE 0, 0, 186, 95
+    CAPTION "General"
+        BEGIN
+        END

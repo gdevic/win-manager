@@ -1,0 +1,4 @@
+//#line "registry.c" 96
+extern void LoadRegistryInfo(struct tagRECT *rcVWM);
+//#line "registry.c" 149
+extern void SaveRegistryInfo(void);

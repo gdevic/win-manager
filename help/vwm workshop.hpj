@@ -1,0 +1,21 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=Yes
+TITLE=VWM Help Title
+COPYRIGHT=Version 1.0
+CITATION=VWM Paste or Print
+PREFIX=IDC
+HLP=VWMHelp.hlp
+
+[FILES]
+NoHelp.rtf
+VWMHelp.rtf
+
+[MAP]
+#include VWMHelp.h
+
+[WINDOWS]
+Help="Help",(602,86,360,362),4,(r14876671),(r12632256),f3
+Help2="General help",(717,101,296,380),4,(r14876671),(r12632256),f3

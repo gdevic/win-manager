@@ -1,0 +1,62 @@
+!define BLANK ""
+d:\vwmrel1.2\enum.obj : d:\vwmrel1.2\enum.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 enum.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -5r -&
+bt=nt -mf
+
+d:\vwmrel1.2\init.obj : d:\vwmrel1.2\init.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 init.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -5r -&
+bt=nt -mf
+
+d:\vwmrel1.2\lock.obj : d:\vwmrel1.2\lock.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 lock.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -5r -&
+bt=nt -mf
+
+d:\vwmrel1.2\property.obj : d:\vwmrel1.2\property.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 property.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -&
+5r -bt=nt -mf
+
+d:\vwmrel1.2\registry.obj : d:\vwmrel1.2\registry.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 registry.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -&
+5r -bt=nt -mf
+
+d:\vwmrel1.2\services.obj : d:\vwmrel1.2\services.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 services.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -&
+5r -bt=nt -mf
+
+d:\vwmrel1.2\vwm.obj : d:\vwmrel1.2\vwm.c .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ *wcc386 vwm.c -i=C:\WATCOM\h;C:\WATCOM\h\nt -w4 -e25 -zq -otexan -d2 -5r -b&
+t=nt -mf
+
+d:\vwmrel1.2\vwm.exe : d:\vwmrel1.2\enum.obj d:\vwmrel1.2\init.obj d:\vwmrel&
+1.2\lock.obj d:\vwmrel1.2\property.obj d:\vwmrel1.2\registry.obj d:\vwmrel1.&
+2\services.obj d:\vwmrel1.2\vwm.obj d:\vwmrel1.2\vwm.res .AUTODEPEND
+ @d:
+ cd d:\vwmrel1.2
+ @%write vwm.lk1 NAME vwm
+ @%append vwm.lk1 FIL enum.obj,init.obj,lock.obj,property.obj,registry.obj,s&
+ervices.obj,vwm.obj
+ @%append vwm.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b vwm.imp 
+ @%append vwm.lk1 LIBR vwm.imp
+!endif
+ *wlink d all SYS nt_win op m libr comctl32.lib libr vwmdll.lib op maxe=25 o&
+p q op symf @vwm.lk1
+!ifneq BLANK "vwm.res"
+ wrc -q -ad vwm.res vwm.exe
+!endif
+

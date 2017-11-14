@@ -1,0 +1,11 @@
+//#line "services.c" 77
+extern void DrawWindow(void *hVWMdc,struct TInfo *pInfo,struct tagRECT *rc);
+//#line "services.c" 140
+extern void VWMPaint(void );
+struct tagPOINT ;
+//#line "services.c" 286
+extern int RestoreWindow(struct tagPOINT pt);
+//#line "services.c" 345
+extern void RestoreAll(void);
+//#line "services.c" 418
+extern int TrayMessage(void *hDlg,unsigned long dwMessage,unsigned int uID,void *hIcon,char *pszTip);

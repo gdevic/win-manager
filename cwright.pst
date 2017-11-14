@@ -1,0 +1,21 @@
+
+[State]
+SysSetCwd='D:\vwmrel1.2'
+SrchSetFlags=0x0411f00a
+FileSortMode=0x0
+StateWindowFrame=510,54,632,765,0xbb253fec
+_StateWindow=0,0,403,444,0x0a980018,'d:\vwmrel1.2\Lock.c',240,15,244,182,32,0,32,183,32,32,8,4294967295,4294967295,1,0,'Tiny ANSI',4294967282,0,49,0,10,499,0,0,753,252,249,71,18,700,0,244,246,242,252,753,753,241,240,253,0,0,253,224,252,68,1,208
+_StateBuffer='d:\vwmrel1.2\Lock.c',0x04000408,71,18,25,'5 9','',0x100,'',1,72
+_StateHistory=FILELIST,'D:\vwmrel1.1\Services.c','D:\vwmrel1.1\Property.c','C:\VWMRel1.1.flaky\Enum.c','C:\vwmrel1.1\VWM.c','C:\VWMRel1.1.flaky\Globals.h','C:\vwmrel1.1\Property.c','C:\vwmrel1.1\Registry.c','C:\vwmrel1.1\Services.c','C:\VWMRel1.1\Globals.h'
+_StateHistory=SEARCH,'VWM_WM_REFRESH','RestoreWindow','RecalculateClientPos','hInstDll','rcRect','nTimer','sTip','dwFlags','MessageBox','sFile'
+_StateHistory=XMACRO,'routines'
+_StateHistory=XSYMBOL,'SemaphoreShowWindow','RestoreWindow','RecalculateClientPos','VWM_Create','RecalculateNewVW','UseBitmap','ID_ACCEPT','ID_CANCEL','ID_LOCK','LockConsole'
+_StateHistory=EDITFILE,'C:\VWM_R1\Globals.h','C:\VWM_R1\resource.h','C:\VWM\VWM_r1\Globals.h','C:\VWM\VWM_r1\Help\Codes.h','D:\VWMRel1.1\Resource.h','D:\VWMRel1.1\Help\VWMHelp.rtf','D:\VWMRel1.1\Globals.h','C:\VWMRel1.1.flaky\Enum.c','C:\VWMRel1.1.flaky\Globals.h','C:\VWMRel1.1\Globals.h'
+_StateHistory=DIRECTORY,'C:\VWMRel1.1'
+_StateHistory=GOTOLINE,'399','453','909','449','905','143','74','114','1164','367'
+_StateHistory=TEMPLATE,'Resource.h','Init.c','VWM_Create()','VWM_Close()'
+_StateHistory=FGREP,'sFile'
+_StateHistory=GREPSCOPE,'*.*'
+ConfigSetExtMode=2
+ProjSetConfigFlags=0x00010140
+

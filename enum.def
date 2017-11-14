@@ -1,0 +1,10 @@
+//#line "enum.c" 76
+extern int __stdcall WinEnumProc(void *hWin,long nIndexTop);
+//#line "enum.c" 246
+extern void PurgeInfoTable(void);
+//#line "enum.c" 293
+extern struct TInfo *GetWinInfo(void *hWnd);
+//#line "enum.c" 404
+extern void RecalculateClientPos(void );
+//#line "enum.c" 451
+extern void RecalculateNewVW(struct tagPOINT *pt);
